@@ -49,7 +49,7 @@ if __name__ == '__main__':
     env.reset()
     # generate text-image of environment and location of agent
     env.render()
-
+    # dictionary to allow
     action_dict = {"left": 0,
                    "down": 1,
                    "right": 2,
