@@ -59,7 +59,7 @@ if __name__ == '__main__':
     if args.run_type == "n_actions":
 
         # number of actions to take
-        MAX_ITERATIONS = args.num_actions
+        MAX_ITERATIONS = args.number
 
         # loop through number of actions
         for i in range(MAX_ITERATIONS):
