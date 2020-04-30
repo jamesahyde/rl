@@ -6,6 +6,15 @@ Created on Thurs April 30, 2020
 adapted by jameshyde from
 https://medium.com/swlh/introduction-to-reinforcement-learning-coding-q-learning-part-3-9778366a41c0
 
+
+Note: this is set up to start off with q-table of all zeros, then have a separate training phase with very high epsilon
+so as to choose random actions almost all the time ('exploration')
+then the epsilon is lowered significantly, in a second phase, to use much more on-policy learning (mostly 'exploitation'
+and little 'exploration')
+
+another option would be to initialize Q-table with 0.25 for each action, in each row, and use only one phase with
+a single epsilon value
+
 """
 
 import numpy as np
