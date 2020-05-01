@@ -116,7 +116,7 @@ if __name__ == "__main__":
 
     ### re-run loop using different epsilon to allow policy to guide actions more often, but keep same Q table
     epsilon = 0.2
-    total_episodes = 10000
+    total_episodes = 100000
     # maximum actions taken in a given episode
     max_steps = 100
 
