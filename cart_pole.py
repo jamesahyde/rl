@@ -41,15 +41,21 @@ class DQNCartPoleSolver():
         self.alpha = alpha
         # learning rate also decreases as learning progresses
         self.alpha_decay = alpha_decay
+        # number of episodes
         self.n_episodes = n_episodes
 
+        # number of consecutive 'ticks' of staying upright for game to be 'won'
         self.n_win_ticks = n_win_ticks
+        # batch size (to be sampled from memory)
         self.batch_size = batch_size
+        # option to suppress text output as model runs and finishes
         self.quiet = quiet
+        # if instantiation of model includes a number for max steps per episode, apply this to the environment
         if max_env_steps is not None: self.env._max_episode_steps = max_env_steps
 
         # Init model
         self.model = Sequential()
+        # inputs are actions,
         self.model.add(Dense(24, input_dim=4, activation='tanh'))
         self.model.add(Dense(48, activation='tanh'))
         self.model.add(Dense(2, activation='linear'))
